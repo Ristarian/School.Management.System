@@ -11,8 +11,11 @@ public class School {
 
     private List<Teacher> teachers;
     private List<Student> students;
-    private int totalMoneyEarned;
-    private int totalMoneySpent;
+
+    // static means that elements belong to the class (not to their instance)
+    // therefore we are abl to use them without need to create any instance of them
+    private static int totalMoneyEarned;
+    private static int totalMoneySpent;
 
     public School(List<Teacher> teachers, List<Student> students) {
         this.teachers = teachers;
@@ -47,8 +50,8 @@ public class School {
     }
 
     // adds the total money earned by the school
-    public void updateTotalMoneyEarned(int MoneyEarned) {
-        totalMoneyEarned =+ MoneyEarned;
+    public static void updateTotalMoneyEarned(int MoneyEarned) {
+        totalMoneyEarned += MoneyEarned;
     }
 
     // returns total money spent by the school

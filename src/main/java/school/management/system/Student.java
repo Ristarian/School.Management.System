@@ -19,8 +19,9 @@ public class Student {
     }
 
     // adding fees to feesPaid because the student will pay every semester for the school
-    public void updateFees(int fees){
+    public void payFees(int fees){
         feesPaid+=fees;
+        School.updateTotalMoneyEarned(feesPaid);
     }
 
     // adding grade's setter because it will probably change in the future
@@ -46,5 +47,10 @@ public class Student {
 
     public int getFeesTotal() {
         return feesTotal;
+    }
+
+    // returns remaining fees
+    public int getRemamingFees(){
+        return feesTotal - feesPaid;
     }
 }
