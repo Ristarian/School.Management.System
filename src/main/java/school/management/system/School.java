@@ -62,6 +62,6 @@ public class School {
     // update the money that is spent by the school (as a salary to the teachers)
     public static void updateTotalMoneySpent(int MoneySpent) {
         // totalMoneyEarned = totalMoneyEarned - moneySpent;
-        totalMoneyEarned -= totalMoneySpent;
+        totalMoneyEarned -= MoneySpent;
     }
 }
