@@ -53,4 +53,6 @@ public class Student {
     public int getRemamingFees(){
         return feesTotal - feesPaid;
     }
+
+
 }
